@@ -9682,3 +9682,75 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+/* --- Achievement Card Styling --- */
+.achievement-card {
+    display: block; /* Important since it's an <a> tag */
+    background: #191919; /* Slightly lighter than the black background */
+    padding: 30px 25px;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Very subtle border */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth animation for hover */
+    position: relative;
+    z-index: 1;
+    height: 100%; /* Ensures all cards in a row are same height */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Base elevation */
+}
+
+/* Typography inside the card */
+.achievement-card h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.achievement-card p {
+    color: #999; /* Standard text color from your theme */
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.achievement-card .read-more {
+    color: #ffbd39; /* Your theme's Gold/Yellow accent */
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Hover Effects (The "Magic" Part) --- */
+.achievement-card:hover {
+    transform: translateY(-10px); /* Moves the card up */
+    background: #222; /* Slightly lighter background on hover */
+    border-color: #ffbd39; /* Gold border appears */
+    box-shadow: 0px 15px 30px rgba(255, 189, 57, 0.15); /* Gold glow shadow */
+}
+
+.achievement-card:hover h3 {
+    color: #ffbd39; /* Heading turns gold */
+}
+
+.achievement-card:hover .read-more {
+    letter-spacing: 3px; /* "View Detail" arrow moves slightly */
+}
+
+
+/* --- Cinematic Zoom Out --- */
+.blog-entry {
+    overflow: hidden; /* Essential: Hides the overflowing edges */
+}
+
+.block-20 {
+    transition: transform 0.5s ease;
+    transform: scale(1.1); /* Start image 10% larger */
+}
+
+.blog-entry:hover .block-20 {
+    transform: scale(1.0); /* Zoom out to normal size */
+}
